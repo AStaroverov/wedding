@@ -24,7 +24,8 @@
   --radius-soft: 12px;
 
   --font-display: var(--font-cormorant), 'Cormorant Garamond', 'Playfair Display', serif;
-  --font-body: var(--font-inter), Inter, Manrope, system-ui, -apple-system, sans-serif;
+  --font-body: var(--font-manrope), Manrope, Inter, system-ui, -apple-system, sans-serif;
+  --font-accent: var(--font-marcellus), Marcellus, var(--font-cormorant), 'Cormorant Garamond', serif;
 
   --section-pad-y: clamp(64px, 10vw, 128px);
   --container-max: 600px;
@@ -40,6 +41,7 @@ html, body {
   background: var(--bg-primary);
   color: var(--ink);
   font-family: var(--font-body);
+  font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -91,13 +93,13 @@ button {
 
 .display {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.05;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
   margin: 0;
 }
 
-.display-xl { font-size: clamp(48px, 10vw, 96px); }
+.display-xl { font-size: clamp(48px, 10vw, 96px); letter-spacing: 0.04em; }
 .display-lg { font-size: clamp(36px, 6vw, 56px); }
 .display-md { font-size: clamp(22px, 3.6vw, 32px); }
 .display-sm { font-size: clamp(18px, 2.4vw, 22px); }
@@ -105,10 +107,18 @@ button {
 .caption {
   font-family: var(--font-body);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-weight: 500;
+  letter-spacing: 0.2em;
+  font-weight: 300;
   font-size: 12px;
   color: var(--ink-muted);
+  margin: 0;
+}
+
+.accent {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
   margin: 0;
 }
 
@@ -117,18 +127,21 @@ button {
   line-height: 1.55;
   color: var(--ink);
   font-size: 17px;
+  font-weight: 300;
 }
 .body-lead {
   margin: 0;
   line-height: 1.55;
   color: var(--ink);
   font-size: clamp(18px, 2.4vw, 22px);
+  font-weight: 300;
 }
 .body-muted {
   margin: 0;
   line-height: 1.55;
   color: var(--ink-muted);
   font-size: 15px;
+  font-weight: 300;
 }
 
 .tabular {

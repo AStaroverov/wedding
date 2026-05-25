@@ -1,19 +1,26 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
+import { Cormorant_Garamond, Manrope, Marcellus } from 'next/font/google';
 import './globals.css';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500', '600'],
+  weight: ['300', '400', '500'],
   display: 'swap',
   variable: '--font-cormorant',
 });
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500'],
+  weight: ['300', '400', '500'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-manrope',
+});
+
+const marcellus = Marcellus({
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+  variable: '--font-marcellus',
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com';
@@ -40,7 +47,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" className={`${cormorant.variable} ${inter.variable}`}>
+    <html
+      lang="ru"
+      className={`${cormorant.variable} ${manrope.variable} ${marcellus.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

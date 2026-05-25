@@ -8,48 +8,59 @@ export function Program() {
     <Section id="program" variant="soft">
       <Reveal>
         <div className="stack stack-lg stack-center">
-          <p className="body-lead stack-narrow" style={{ textAlign: 'center' }}>
+          <p
+            className="body-lead stack-narrow"
+            style={{ textAlign: 'center', whiteSpace: 'pre-line' }}
+          >
             {greeting.text}
           </p>
           <Divider />
           <h2 className="display display-md">Программа</h2>
-          <ol
+          <table
             style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0,
               width: '100%',
               maxWidth: 520,
-              display: 'grid',
+              borderCollapse: 'collapse',
+              tableLayout: 'auto',
             }}
           >
-            {program.map((item, i) => (
-              <li
-                key={item.time}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'minmax(110px, max-content) 1fr',
-                  alignItems: 'baseline',
-                  gap: 'var(--space-5)',
-                  paddingBlock: 'var(--space-4)',
-                  borderTop: i === 0 ? 'none' : '1px solid var(--line)',
-                }}
-              >
-                <span
-                  className="caption tabular"
-                  style={{ fontSize: 'clamp(14px, 1.7vw, 17px)' }}
+            <tbody>
+              {program.map((item, i) => (
+                <tr
+                  key={item.time}
+                  style={{
+                    borderTop: i === 0 ? 'none' : '1px solid var(--line)',
+                  }}
                 >
-                  {item.time}
-                </span>
-                <span
-                  className="display"
-                  style={{ fontSize: 'clamp(19px, 2.7vw, 25px)' }}
-                >
-                  {item.title}
-                </span>
-              </li>
-            ))}
-          </ol>
+                  <td
+                    className="caption tabular"
+                    style={{
+                      fontSize: 'clamp(14px, 1.7vw, 17px)',
+                      paddingBlock: 'var(--space-4)',
+                      paddingRight: 'var(--space-5)',
+                      verticalAlign: 'baseline',
+                      whiteSpace: 'nowrap',
+                      width: '37%',
+                      textAlign: 'right',
+                    }}
+                  >
+                    {item.time}
+                  </td>
+                  <td
+                    className="display"
+                    style={{
+                      fontSize: 'clamp(19px, 2.7vw, 25px)',
+                      paddingBlock: 'var(--space-4)',
+                      verticalAlign: 'baseline',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {item.title}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </Reveal>
     </Section>

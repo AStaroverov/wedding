@@ -20,7 +20,7 @@ export function DressCode() {
             className="display display-md"
             style={{ paddingInline: 'var(--space-6)' }}
           >
-            Дресс-код — {dressCode.rule}
+            Дресс-код — <span className="accent">{dressCode.rule}</span>
           </h2>
           <div
             style={{

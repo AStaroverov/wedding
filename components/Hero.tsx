@@ -42,7 +42,7 @@ export function Hero() {
         }}
       >
         <p
-          className="caption"
+          className="accent"
           style={{
             color: '#FAF7F2',
             opacity: 0.9,
