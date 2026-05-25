@@ -17,7 +17,7 @@ export const event = {
   dateLabel: '4 июля 2026',
   city: 'Истринский район',
   address: 'Истринский район, СНТ «Рассвет», участок 104',
-  coords: { lat: 55.501972, lon: 37.819343 },
+  coords: { lat: 56.024305, lon: 36.894896 },
   mapZoom: 16,
 } as const;
 

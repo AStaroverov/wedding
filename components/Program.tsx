@@ -35,8 +35,18 @@ export function Program() {
                   borderTop: i === 0 ? 'none' : '1px solid var(--line)',
                 }}
               >
-                <span className="caption tabular">{item.time}</span>
-                <span className="display display-sm">{item.title}</span>
+                <span
+                  className="caption tabular"
+                  style={{ fontSize: 'clamp(14px, 1.7vw, 17px)' }}
+                >
+                  {item.time}
+                </span>
+                <span
+                  className="display"
+                  style={{ fontSize: 'clamp(19px, 2.7vw, 25px)' }}
+                >
+                  {item.title}
+                </span>
               </li>
             ))}
           </ol>

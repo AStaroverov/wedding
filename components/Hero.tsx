@@ -41,11 +41,25 @@ export function Hero() {
           paddingInline: 'var(--space-6)',
         }}
       >
-        <p className="caption" style={{ color: '#FAF7F2', opacity: 0.85 }}>
+        <p
+          className="caption"
+          style={{
+            color: '#FAF7F2',
+            opacity: 0.9,
+            fontSize: 'clamp(16px, 2.2vw, 22px)',
+          }}
+        >
           {event.project}
         </p>
         <h1 className="display display-xl">{event.names}</h1>
-        <p className="caption tabular" style={{ color: '#FAF7F2', opacity: 0.85 }}>
+        <p
+          className="caption tabular"
+          style={{
+            color: '#FAF7F2',
+            opacity: 0.9,
+            fontSize: 'clamp(16px, 2.2vw, 22px)',
+          }}
+        >
           {event.dateLabel}
         </p>
       </div>
