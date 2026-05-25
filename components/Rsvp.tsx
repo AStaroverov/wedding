@@ -7,7 +7,6 @@ import { z } from 'zod';
 import { Section } from './ui/Section';
 import { Reveal } from './ui/Reveal';
 import { Button } from './ui/Button';
-import { rsvp } from '@/lib/content';
 
 const DRINKS = ['Больше алкогольные', '50 на 50', 'Больше безалкогольные'] as const;
 const TRANSPORT = ['Машина (я водитель)', 'Машина (я пассажир)', 'Такси'] as const;
@@ -116,7 +115,6 @@ export function Rsvp() {
         <div className="stack stack-md stack-narrow">
           <div className="stack stack-center" style={{ gap: 'var(--space-3)' }}>
             <h2 className="display display-md">Вопросы для гостей</h2>
-            <p className="body-muted">{rsvp.intro}</p>
           </div>
 
           {status === 'ok' ? (

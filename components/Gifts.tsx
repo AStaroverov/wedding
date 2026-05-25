@@ -10,7 +10,7 @@ export function Gifts() {
         <div className="stack stack-md stack-center stack-narrow">
           <Divider />
           <h2 className="display display-md" style={{ color: '#FAF7F2' }}>
-            Подарки — {gifts.title.toLowerCase()}
+            {gifts.title}
           </h2>
           <p className="body" style={{ color: '#DDE3D4' }}>
             {gifts.body}
